@@ -13,10 +13,9 @@ if uploaded_file is not None:
     st.write("### Raw Data")
     st.write(df.head())
 
-    # Display Data Type
-
-    st.write("### Data Types of Each Column")
-    st.write(df.info())
+    # Display Column Types
+    st.write("### Column Data Types")
+    st.write(df.dtypes)
     
     # Data Cleaning
     st.write("### Data Cleaning")
