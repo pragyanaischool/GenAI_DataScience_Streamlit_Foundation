@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.title("CSV Data Cleaning & Visualization App")
+st.title("Basic Cleaning & Visualization App")
 
 # Upload CSV file
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
