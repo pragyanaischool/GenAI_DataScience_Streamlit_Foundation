@@ -30,7 +30,7 @@ if uploaded_file is not None:
     
     # Sidebar for Chart Selection
     st.sidebar.header("Choose a Chart Type")
-    chart_type = st.sidebar.selectbox("Select Chart", ["Histogram", "Correlation Heatmap", "Box Plot", "Pair Plot", "Line Plot", "Scatter Plot", "Map Plot"])
+    chart_type = st.sidebar.selectbox("Select Chart", ["Histogram", "Correlation Heatmap", "Box Plot", "Pair Plot", "Line Plot", "Scatter Plot"])
     
     numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns.tolist()
     categorical_columns = df.select_dtypes(include=['object']).columns.tolist()
