@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -32,7 +33,7 @@ if uploaded_file is not None:
     # Visualizations
     st.write("### Visualizations")
     
-    numeric_columns = df.select_dtypes(include=[['int64', 'float64']]).columns.tolist()
+    numeric_columns = df.select_dtypes(include=np.number).columns.tolist()
     st.write(numeric_columns)
     if numeric_columns:
         st.write("#### Histogram")
