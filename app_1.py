@@ -44,8 +44,7 @@ if uploaded_file is not None:
         
         st.write("#### Correlation Heatmap")
         fig, ax = plt.subplots()
-        df1 = df[[numeric_columns]]
-        sns.heatmap(df1.corr(), annot=True, cmap='coolwarm', ax=ax)
+        sns.heatmap(df[numeric_columns].corr(), annot=True, cmap='coolwarm', ax=ax)
         st.pyplot(fig)
         
         st.write("#### Box Plot")
