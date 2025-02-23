@@ -32,7 +32,8 @@ if uploaded_file is not None:
     # Visualizations
     st.write("### Visualizations")
     
-    numeric_columns = df.select_dtypes(include=['number']).columns.tolist()
+    numeric_columns = df.select_dtypes(include=[['int64', 'float64']]).columns.tolist()
+
     if numeric_columns:
         st.write("#### Histogram")
         selected_column = st.selectbox("Select column for histogram", numeric_columns)
