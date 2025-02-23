@@ -12,6 +12,11 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.write("### Raw Data")
     st.write(df.head())
+
+    # Display Data Type
+
+    st.write("### Data Types of Each Column")
+    st.write(df.info())
     
     # Data Cleaning
     st.write("### Data Cleaning")
